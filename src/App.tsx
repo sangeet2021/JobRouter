@@ -9,7 +9,7 @@ function App() {
       <header>
         <nav>
           <Link to="/">JobRouter</Link>
-          <NavLink to='about'>Home</NavLink>
+          <NavLink to='about'>About</NavLink>
         </nav>
       </header>
       <main>
