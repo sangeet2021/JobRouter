@@ -12,12 +12,13 @@ const RootLayout = () => {
           <div className="sub-nav">
             <NavLink to="about">About</NavLink>
             <NavLink to="careers">Careers</NavLink>
+            <NavLink to="help">Help</NavLink>
           </div>
         </nav>
       </header>
 
       <main>
-        <Outlet/>
+        <Outlet />
       </main>
     </div>
   );
