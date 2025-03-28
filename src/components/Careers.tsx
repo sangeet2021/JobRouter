@@ -30,6 +30,9 @@ const Careers = () => {
 
 export const careerLoaders = async () => {
   const res = await fetch("http://localhost:4000/jobs");
+  if (!res.ok) {
+    throw Error("Could not fetch the data!");
+  }
   return res.json();
 };
 

@@ -16,7 +16,7 @@ const CareersDesc = () => {
       <h2>Career Details for {job.title}</h2>
       <p>Salary: {job.salary}</p>
       <p>Location: {job.location}</p>
-      <p>Job Type:{job.workMode}</p>
+      <p>Job Type: {job.workMode}</p>
     </div>
   );
 };
@@ -29,6 +29,9 @@ export const careerDetailsLoader = async ({
   params: { id: string };
 }) => {
   const { id } = params;
-  const res = await fetch("http://localhost:4000/jobs" + id);
+  const res = await fetch("http://localhost:4000/jobs/" + id);
+  if (!res.ok) {
+    throw Error("Could not find the career!");
+  }
   return res.json();
 };
